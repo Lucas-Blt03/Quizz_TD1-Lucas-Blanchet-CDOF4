@@ -14,9 +14,9 @@ A Python-based quiz game that challenges players with increasingly difficult que
 - Easy to customize questions and answers
 
 ### Example of Question:
-{\n
-    "question": "Your question here?", \n
-    "options": ["Option 1", "Option 2", "Option 3", "Option 4"], \n
-    "correct_answer": "Correct option here", \n
-    "hint": "Hint for the question" \n
-}\n
+{  
+    "question": "Your question here?",  
+    "options": ["Option 1", "Option 2", "Option 3", "Option 4"],  
+    "correct_answer": "Correct option here",  
+    "hint": "Hint for the question"  
+}
