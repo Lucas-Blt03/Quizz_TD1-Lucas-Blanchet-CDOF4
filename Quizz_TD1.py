@@ -1,3 +1,4 @@
+
 import random
 
 class QuizGame:
@@ -91,6 +92,7 @@ class QuizGame:
         }
         self.score = 0
         self.current_level = 1
+        self.lives = 3              # Change this value to modify the player's total lives !
 
     def ask_question(self, level):
         question = random.choice(self.questions[level])
@@ -101,8 +103,7 @@ class QuizGame:
         for i, option in enumerate(question["options"], 1):
             print(f"{i}. {option}")
         
-        attempts = 2
-        while attempts > 0:
+        while self.lives > 0:
             try:
                 choice = int(input("\nEnter your choice (1-4): "))
                 
@@ -111,14 +112,14 @@ class QuizGame:
                     print("Correct! 🎉")
                     return True
                 else:
-                    attempts -= 1
-                    if attempts > 0:
+                    self.lives -= 1
+                    if self.lives > 0:
                         print(f"Incorrect. Here's a hint: {question['hint']}")
-                        print(f"You have {attempts} attempt left.")
+                        print(f"You have {self.lives} lives left.")
                     else:
                         print(f"Sorry, the correct answer was: {question['correct_answer']}")
                         return False
-            except ValueError:
+            except IndexError:
                 print("Please enter a valid number between 1 and 4")
 
     def play(self):
@@ -126,20 +127,17 @@ class QuizGame:
         print("Rules:")
         print("- There are 5 levels of increasing difficulty")
         print("- Each question has 4 possible answers")
-        print("- You get 2 attempts per question, with a hint after the first attempt")
+        print(f"- You get {self.lives} total lives per question, with a hint after a failed attempt.")
         print("- You need to answer correctly to advance to the next level")
         
-        while self.current_level <= 5:
+        while self.current_level <= 5 and self.lives!=0:
             print(f"\n=== Level {self.current_level} ===")
             if self.ask_question(self.current_level):
                 self.score += self.current_level * 100
                 if self.current_level < 5:
                     print(f"Congratulations! Moving to level {self.current_level + 1}")
                 self.current_level += 1
-            else:
-                retry = input("Would you like to try again? (yes/no): ").lower()
-                if retry != 'yes':
-                    break
+
 
         print(f"\nGame Over! Final score: {self.score}")
         if self.current_level > 5:
