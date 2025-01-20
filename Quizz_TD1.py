@@ -118,7 +118,7 @@ class QuizGame:
                     else:
                         print(f"Sorry, the correct answer was: {question['correct_answer']}")
                         return False
-            except ValueError:
+            except IndexError:
                 print("Please enter a valid number between 1 and 4")
 
     def play(self):
