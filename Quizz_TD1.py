@@ -1,3 +1,4 @@
+
 import random
 
 class QuizGame:
@@ -129,17 +130,14 @@ class QuizGame:
         print(f"- You get {self.lives} total lives per question, with a hint after a failed attempt.")
         print("- You need to answer correctly to advance to the next level")
         
-        while self.current_level <= 5:
+        while self.current_level <= 5 and self.lives!=0:
             print(f"\n=== Level {self.current_level} ===")
             if self.ask_question(self.current_level):
                 self.score += self.current_level * 100
                 if self.current_level < 5:
                     print(f"Congratulations! Moving to level {self.current_level + 1}")
                 self.current_level += 1
-            else:
-                retry = input("Would you like to try again? (yes/no): ").lower()
-                if retry != 'yes':
-                    break
+
 
         print(f"\nGame Over! Final score: {self.score}")
         if self.current_level > 5:
