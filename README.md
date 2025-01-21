@@ -58,7 +58,8 @@ What is the capital of France?
 4. Paris
 
 Enter your choice (1-4): 4
-Correct! 🎉 You earned 100 points.\`\`\`
+Correct! 🎉 You earned 100 points.
+```
 
 
 Here's what the game looks like when you finish it:
@@ -69,8 +70,49 @@ Congratulations Player 1, you've completed all levels! 🏆
 Game Over! Final Scores:
 Player 1: 1500 points
 
-Thank you for playing! Hope you enjoyed the game!\`\`\`
+Thank you for playing! Hope you enjoyed the game!
+```
+Here's what the game looks like when you play at 2 players:
 
+```plaintext
+How many players? (1 or 2): 2
+Enter the name of Player 1: Jean
+Enter the name of Player 2: Alice
+
+=== Jean's Turn (Level 1) ===
+
+Jean, Level 1 Question:
+What is 5 + 7?
+1. 10
+2. 11
+3. 12
+4. 13
+
+Enter your choice (1-4): 3
+Correct! 🎉 You earned 100 points.
+
+=== Alice's Turn (Level 1) ===
+
+Alice, Level 1 Question:
+What is the capital of France?
+1. London
+2. Berlin
+3. Madrid
+4. Paris
+
+Enter your choice (1-4): 4
+Correct! 🎉 You earned 100 points.
+
+-
+-
+-
+
+Game Over! Final Scores:
+Jean: 1000 points
+Alice: 1500 points
+
+And the winner is... 🏆 Alice 🏆 with 1500 points! Congratulations!
+```
 
 ## Question Format Test
 
