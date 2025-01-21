@@ -38,7 +38,7 @@ python quiz_game.py
 ## Example Output
 Here's what the game looks like when you play it:
 
-<p>
+```plaintext
 Welcome to the Multiple Choice Progressive Quiz Game!
 Rules:
 - There are 5 levels of increasing difficulty
@@ -58,19 +58,18 @@ What is the capital of France?
 4. Paris
 
 Enter your choice (1-4): 4
-Correct! 🎉 You earned 100 points.
-</p>
+Correct! 🎉 You earned 100 points.\`\`\`
+
 
 Here's what the game looks like when you finish it:
 
-<p>
+```plaintext
 Congratulations Player 1, you've completed all levels! 🏆
 
 Game Over! Final Scores:
 Player 1: 1500 points
 
-Thank you for playing! Hope you enjoyed the game!
-</p>
+Thank you for playing! Hope you enjoyed the game!\`\`\`
 
 
 ## Question Format Test
