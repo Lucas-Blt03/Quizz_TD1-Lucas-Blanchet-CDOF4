@@ -35,6 +35,42 @@ python quiz_game.py
 4. Progress through 5 levels of increasing difficulty
 5. Score points based on your level (Level 1 = 100pts, Level 2 = 200pts, etc.)
 
+## Example Output
+Here's what the game looks like when you play it:
+
+```plaintext
+Welcome to the Multiple Choice Progressive Quiz Game!
+Rules:
+- There are 5 levels of increasing difficulty
+- Each question has 4 possible answers
+- You get 3 total lives per question, with a hint after a failed attempt.
+- You need to answer correctly to advance to the next level
+
+How many players? (1 or 2): 1
+
+=== Player 1's Turn (Level 1) ===
+
+Player 1, Level 1 Question:
+What is the capital of France?
+1. London
+2. Berlin
+3. Madrid
+4. Paris
+
+Enter your choice (1-4): 4
+Correct! 🎉 You earned 100 points.```
+
+Here's what the game looks like when you finish it:
+
+```plaintext
+Congratulations Player 1, you've completed all levels! 🏆
+
+Game Over! Final Scores:
+Player 1: 1500 points
+
+Thank you for playing! Hope you enjoyed the game!```
+
+
 ## Question Format Test
 
 {  
